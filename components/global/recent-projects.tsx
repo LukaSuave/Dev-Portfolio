@@ -16,10 +16,7 @@ export const RecentProjects = () => {
 						className="lg:min-h-[32.5rem] h-[25rem] flex items-center justify-center sm:w-96 w-[80vw]"
 						key={project.id}
 					>
-						<PinContainer
-							title="/ui.aceternity.com"
-							href="https://twitter.com/mannupaaji"
-						>
+						<PinContainer title={project.title} href={project.link}>
 							<div className="relative flex items-center justify-center sm:w-96 w-[80vw] overflow-hidden h-[20vh] lg:h-[30vh] mb-10">
 								<div
 									className="relative w-full h-full overflow-hidden lg:rounded-3xl"
@@ -69,7 +66,10 @@ export const RecentProjects = () => {
 									))}
 								</div>
 
-								<div className="flex justify-center items-center">
+								<a
+									href={project.link}
+									className="flex justify-center items-center"
+								>
 									<p className="flex lg:text-xl md:text-xs text-sm text-blue-600">
 										Check Live Site
 									</p>
@@ -77,7 +77,7 @@ export const RecentProjects = () => {
 										className="ms-3"
 										color="#CBACF9"
 									/>
-								</div>
+								</a>
 							</div>
 						</PinContainer>
 					</div>
